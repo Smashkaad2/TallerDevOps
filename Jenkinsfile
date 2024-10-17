@@ -3,6 +3,13 @@ pipeline {
 
     stages {
 
+    stage('Install dependencies') {
+        steps {
+             sh 'pip install pylint'
+            }
+        }
+
+
         stage('Install Dependencies') {
             steps {
                 sh 'pip install pylint'
